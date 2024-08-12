@@ -34,7 +34,7 @@ app.post("/",function(req,res){
     const url = "https:/us12.api.mailchimp.com/3.0/lists/9f7dc6585e"
     const options = {
         method: "POST",
-        auth: "aditya1:d73d91a60b40ab8de541a62a993bb17c-us13"
+        auth: "// d4be243f82e4b21c7ae6711a9bc409d4"
     }
 
     const request = https.request(url,options,function(response){
@@ -42,7 +42,7 @@ app.post("/",function(req,res){
         if(response.statusCode === 200) {
             res.sendFile(__dirname + "/success.html");
         } else{
-            res.sendFile(__dirname + "/Failure.html");
+            res.sendFile(__dirname + "/failure.html");
         }
 
         response.on("data",function(data){
@@ -68,3 +68,4 @@ app.listen(3000,function(){
 //api key
 // d73d91a60b40ab8de541a62a993bb17c-us12
 // 9f7dc6585e list id
+//d4be243f82e4b21c7ae6711a9bc409d4
